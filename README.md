@@ -50,4 +50,4 @@ python demo.py
 
 ## Todo
 
-the code only support 1 GPU training, you can use nn.DataPareller to modify the code for multi-GPUs training.
+the code only support 1 GPU training, you can use nn.DataParaller to modify the code for multi-GPUs training.
