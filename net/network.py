@@ -24,10 +24,10 @@ class CSPNet(nn.Module):
         self.p4 = nn.ConvTranspose2d(1024, 256, kernel_size=4, stride=4, padding=0)
         self.p5 = nn.ConvTranspose2d(2048, 256, kernel_size=4, stride=4, padding=0)
 
-        #nn.init.kaiming_normal_(self.p3.weight)
+        nn.init.kaiming_normal_(self.p3.weight)
         nn.init.kaiming_normal_(self.p4.weight)
         nn.init.kaiming_normal_(self.p5.weight)
-        #nn.init.constant_(self.p3.bias, 0)
+        nn.init.constant_(self.p3.bias, 0)
         nn.init.constant_(self.p4.bias, 0)
         nn.init.constant_(self.p5.bias, 0)
 
