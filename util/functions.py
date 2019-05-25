@@ -1,3 +1,4 @@
+from __future__ import division
 import cv2
 import numpy as np
 from nms_wrapper import nms
@@ -6,11 +7,11 @@ from nms_wrapper import nms
 def resize(image, min_side=800, max_side=1400):
     rows, cols, cns = image.shape
     smallest_side = min(rows, cols)
-    scale = min_side / smallest_side
+    scale = 1.0 * min_side / smallest_side
     largest_side = max(rows, cols)
 
     if largest_side * scale > max_side:
-        scale = max_side / largest_side
+        scale = 1.0 * max_side / largest_side
     image = cv2.resize(image, (int(round((cols * scale))), int(round((rows * scale)))))
 
     rows, cols, cns = image.shape

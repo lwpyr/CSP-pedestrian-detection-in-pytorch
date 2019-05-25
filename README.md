@@ -34,20 +34,13 @@ Prepare CityPersons dataset as the original codes doing
 
 
 
-Training
+Training & val
 
 ~~~
-python train.py
+python trainval_torchstyle.py
+python trainval_caffestyle.py
 ~~~
 
+NOTE
 
-
-Demo
-
-~~~
-python demo.py
-~~~
-
-## Todo
-
-the code only support 1 GPU training, you can use nn.DataParaller to modify the code for multi-GPUs training.
+using caffe style, you need to download additional pre-trained weight.

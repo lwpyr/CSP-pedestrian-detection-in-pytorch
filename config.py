@@ -1,6 +1,6 @@
 class Config(object):
     def __init__(self):
-        self.gpu_ids = '0'
+        self.gpu_ids = [0, 1]
         self.onegpu = 2
         self.num_epochs = 150
         self.add_epoch = 0
@@ -25,6 +25,22 @@ class Config(object):
         self.use_horizontal_flips = True
         self.brightness = (0.5, 2, 0.5)
         self.size_train = (336, 448)
+        self.size_test = (336, 338)
 
         # image channel-wise mean to subtract, the order is BGR
         self.img_channel_mean = [103.939, 116.779, 123.68]
+
+        # whether or not use caffe style training which is used in paper
+        self.caffemodel = False
+
+        # use teacher
+        self.teacher = True
+
+        self.test_path = './data/citypersons'
+
+        # whether or not to do validation during training
+        self.val = True
+        self.val_frequency = 10
+
+    def print_conf(self):
+        print '\n'.join(['%s:%s' % item for item in self.__dict__.items()])
