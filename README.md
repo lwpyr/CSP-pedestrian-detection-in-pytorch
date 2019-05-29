@@ -44,3 +44,9 @@ python trainval_caffestyle.py
 NOTE
 
 using caffe style, you need to download additional pre-trained weight.
+
+## update
+
+12.56 MR trained weight provided here
+
+https://www.dropbox.com/s/2uivsotq46la15u/CSPNet-89.pth?dl=0
