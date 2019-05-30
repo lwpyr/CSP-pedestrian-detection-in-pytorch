@@ -63,6 +63,8 @@ for n, p in net.named_parameters():
         print(n)
 
 if config.teacher:
+    print('I found this teacher model is useless, I disable this training option')
+    exit(1)
     teacher_dict = net.state_dict()
 
 #if len(config.gpu_ids) > 1:

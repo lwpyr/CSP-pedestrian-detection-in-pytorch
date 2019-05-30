@@ -3,6 +3,14 @@ Unofficially Pytorch implementation of [**High-level Semantic Feature Detection:
 
 This code is only for CityPersons dataset, and only for center-position+height regression+offset regression model.
 
+## update
+
+On Cityperson validation set
+
+11.71 MR [CSPNet-26.pth](https://www.dropbox.com/s/albzr94lru7fdsv/CSPNet-26.pth?dl=0) (NEW !)
+
+12.56 MR [CSPNet-89.pth](<https://www.dropbox.com/s/2uivsotq46la15u/CSPNet-89.pth?dl=0>)
+
 ## Requirement
 
 Python, pytorch and other related libaries
@@ -45,8 +53,3 @@ NOTE
 
 using caffe style, you need to download additional pre-trained weight.
 
-## update
-
-12.56 MR trained weight provided here
-
-https://www.dropbox.com/s/2uivsotq46la15u/CSPNet-89.pth?dl=0
