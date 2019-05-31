@@ -20,21 +20,6 @@ class CSPNet(nn.Module):
         self.layer3 = resnet.layer3
         self.layer4 = resnet.layer4
 
-        for p in self.conv1.parameters():
-            p.requires_grad = False
-
-        # In CSP, all BN layers are trainable, So here we use a function to modify CONV2's parameter
-        for p in self.layer1.parameters():
-            p.requires_grad = False
-
-        def set_bn_trainable(m):
-            class_name = m.__class__.__name__
-            if class_name.find('BatchNorm') != -1:
-                for p in m.parameters():
-                    p.requires_grad = True
-
-        self.layer1.apply(set_bn_trainable)
-
         self.p3 = nn.ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1)
         self.p4 = nn.ConvTranspose2d(1024, 256, kernel_size=4, stride=4, padding=0)
         self.p5 = nn.ConvTranspose2d(2048, 256, kernel_size=4, stride=4, padding=0)
