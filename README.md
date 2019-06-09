@@ -3,6 +3,11 @@ Unofficially Pytorch implementation of [**High-level Semantic Feature Detection:
 
 This code is only for CityPersons dataset, and only for center-position+height regression+offset regression model.
 
+## NOTE
+This repo will no longer be updated.
+After all the experiments are done, I will open a new repo.
+Currently MR of CityPerson has reach 10.2%, time consuming 0.16 sec per frame(4K)
+
 ## update
 
 On Cityperson validation set
