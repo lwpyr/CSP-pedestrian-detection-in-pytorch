@@ -47,8 +47,8 @@ class CSPNet(nn.Module):
         nn.init.xavier_normal_(self.pos_conv.weight)
         nn.init.xavier_normal_(self.reg_conv.weight)
         nn.init.xavier_normal_(self.off_conv.weight)
-        nn.init.constant_(self.reg_conv.bias, -math.log(0.99/0.01))
-        nn.init.constant_(self.pos_conv.bias, 0)
+        nn.init.constant_(self.pos_conv.bias, -math.log(0.99/0.01))
+        nn.init.constant_(self.reg_conv.bias, 0)
         nn.init.constant_(self.off_conv.bias, 0)
 
     def forward(self, x):
